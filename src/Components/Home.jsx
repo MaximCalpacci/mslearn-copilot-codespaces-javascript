@@ -32,8 +32,30 @@ const Home = ({ name, title }) => {
         <h1>{name}</h1>
         <h2>{title}</h2>
       </div>
-      <div style={{ position: "absolute", bottom: "3rem", left: "50%" }}>
-        <img src={arrowSvg} style={{ height: "3rem", width: "3rem" }} alt={imageAltText} />
+      <div
+        style={{ position: "absolute", bottom: "3rem", left: "50%", transform: "translateX(-50%)" }}
+      >
+        <button
+          onClick={() => {
+            const aboutSection = document.getElementById("about");
+            if (aboutSection) {
+              aboutSection.scrollIntoView({ behavior: "smooth" });
+            }
+          }}
+          style={{
+            background: "rgba(255,255,255,0.7)",
+            border: "2px solid #e74c3c",
+            borderRadius: "50%",
+            padding: "0.5rem 0.7rem",
+            cursor: "pointer",
+            outline: "none",
+            boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
+            transition: "background 0.2s, box-shadow 0.2s"
+          }}
+          aria-label="Scroll to About section"
+        >
+          <img src={arrowSvg} style={{ height: "3rem", width: "3rem" }} alt={imageAltText} />
+        </button>
       </div>
     </section>
   );

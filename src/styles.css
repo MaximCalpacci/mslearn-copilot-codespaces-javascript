@@ -1,8 +1,30 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Montserrat:wght@200;400;600;800&display=swap");
+
+/* Social Icons Animation */
+.social-icon {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+.social-icon:hover, .social-icon:focus {
+  transform: scale(1.25) rotate(-10deg);
+  box-shadow: 0 8px 24px 0 rgba(0,0,0,0.18), 0 1.5px 6px 0 rgba(0,0,0,0.12);
+  z-index: 2;
+}
+
+.social-icon:active {
+  transform: scale(0.95) rotate(2deg);
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.12);
+}
 /**
 * CSS file to hold styles that apply across the application
 */
-
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Montserrat:wght@200;400;600;800&display=swap");
 
 html,
 body {
